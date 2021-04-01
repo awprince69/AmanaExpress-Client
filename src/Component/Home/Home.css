@@ -1,0 +1,11 @@
+.homeContainer{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    padding-left: 90px;
+}
+
+.searchField{
+    margin: 0px 600px;
+    padding-top: 12px;
+}

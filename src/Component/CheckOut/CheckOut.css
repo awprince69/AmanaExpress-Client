@@ -1,0 +1,7 @@
+.button{
+    margin-right: 80px;
+    margin-top: 10px;
+}
+.button:hover{
+    box-shadow: 20px 20px 20px lightblue;
+}

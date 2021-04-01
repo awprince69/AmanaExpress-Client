@@ -1,0 +1,12 @@
+.loginContainer{
+ background-image: url('https://i.ibb.co/VBjPrCj/1624843.jpg');
+    height: 670px;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.loginButton{
+    margin: 310px 695px;
+    width: 200px;
+    height: 40px;
+}
