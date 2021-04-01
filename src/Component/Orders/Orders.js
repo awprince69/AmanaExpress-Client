@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { UserContext } from '../../App';
 import './Orders.css'
+import Spinner from '../../images/spinner.jpg'
 
 const Orders = () => {
     const [loggedIn, setLoggedIn] = useContext(UserContext)
@@ -27,21 +28,27 @@ const Orders = () => {
     }
     return (
         <div className='container'>
-            <Table bordered hover variant="dark" className='productImage'>
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>OrderTime</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        orders.map(renderProduct)
-                    }
-                </tbody>
-            </Table >
+            {
+                orders.length === 0 && <p style={{ margin: '0px 150px' }}><img src={Spinner} alt="" /></p>
+            }
+            {
+                orders.length !== 0 &&
+                <Table bordered hover variant="dark" className='productImage'>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>OrderTime</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map(renderProduct)
+                        }
+                    </tbody>
+                </Table >
+            }
         </div>
     );
 };

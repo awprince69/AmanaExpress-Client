@@ -1,0 +1,23 @@
+.products{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.spaceInput{
+    width: 1000px;
+    height: 100px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+.spaceBetween{
+    margin-right: 100px;
+}
+.submitButton{
+    margin-left: 900px;
+    margin-bottom: 20px;
+}
+
+.formContainer{
+    background-color: #ecfdfb;
+    border-radius: 20px;
+}

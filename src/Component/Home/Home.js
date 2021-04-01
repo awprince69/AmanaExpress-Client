@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Products from '../Products/Products';
 import './Home.css'
 import { Button } from 'react-bootstrap';
+import Spinner from '../../images/spinner.jpg'
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -21,6 +22,9 @@ const Home = () => {
                 <Button variant='success'>Search</Button>
             </div>
             <div className="homeContainer">
+                {
+                    products.length === 0 && <p style={{margin:'0px 300px'}}><img src={Spinner} alt=""/></p>
+                }
                 {
                     products.map(product => <Products key={product._id} product={product}></Products>)
                 }
