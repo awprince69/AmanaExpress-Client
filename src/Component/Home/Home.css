@@ -26,3 +26,11 @@
         padding-top: 5px;
     }
 }
+
+@media  (min-width: 992px){
+    .searchField{
+        margin: 0px 0px;
+        margin-left: 580px;
+        padding-top: 5px;
+    }
+}
