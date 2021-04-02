@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import './CheckOut.css'
 import { UserContext } from '../../App';
 import { useContext } from 'react';
@@ -11,19 +11,18 @@ const CheckOut = () => {
     const { id } = useParams();
     const [productId, setProductId] = useState({})
     useEffect(() => {
-        const url = `http://localhost:5055/${id}`
+        const url = `https://still-sierra-25000.herokuapp.com/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProductId(data))
     }, [id])
-    
-    const { name, price, ImageURL } = productId;
-    const [loggedIn, setLoggedIn] = useContext(UserContext)
 
+    const { name, price, ImageURL } = productId;
+    const history = useHistory();
+    const [loggedIn, setLoggedIn] = useContext(UserContext)
     const handleCheckOut = () => {
         const addOrder = { ...loggedIn, product: name, price: price, image: ImageURL, orderTime: new Date() }
-        // console.log(addOrder);
-        fetch('http://localhost:5055/addOrder', {
+        fetch('https://still-sierra-25000.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +31,8 @@ const CheckOut = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log("order successfully");
+                alert("Ordered successfully");
+                history.push('/home')
             })
     }
     return (

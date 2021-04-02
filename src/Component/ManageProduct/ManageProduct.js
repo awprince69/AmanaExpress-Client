@@ -9,7 +9,7 @@ import Spinner from '../../images/spinner.jpg'
 const ManageProduct = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5055/products')
+        fetch('https://still-sierra-25000.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -18,15 +18,12 @@ const ManageProduct = () => {
 
     const handleDelete = (id, event) => {
         // console.log(id);
-        fetch(`http://localhost:5055/delete/${id}`, {
+        fetch(`https://still-sierra-25000.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
-                // if (data) {
-                //     event.target.parentNode.style.display = "none"
-                // }
-                console.log("delete Successfully");
+                alert("Delete Successfully");
             })
     }
 
@@ -49,7 +46,7 @@ const ManageProduct = () => {
             }
             {
                 products.length !== 0 &&
-                < Table hover variant="">
+                < Table hover>
                     <thead>
                         <tr>
                             <th>Product</th>

@@ -18,7 +18,7 @@ const AddProduct = () => {
             price: data.price,
             ImageURL: imageURL
         }
-        const url = 'http://localhost:5055/addProduct'
+        const url = 'https://still-sierra-25000.herokuapp.com/addProduct'
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(eventData),
@@ -72,7 +72,7 @@ const AddProduct = () => {
                             <input name="addPhoto" id='myInput' type="file" onChange={handleImageUpload} style={{ display: 'none' }} />
                         </div>
                     </div>
-                    <Button className='submitButton' variant='outline-success' type="submit">Save</Button>
+                    <Button disabled={imageURL?'':"true"} className='submitButton' variant='outline-success' type="submit">Save</Button>
                 </form>
             </div>
         </div>
