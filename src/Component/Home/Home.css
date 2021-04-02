@@ -3,9 +3,26 @@
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
     padding-left: 90px;
+    background-color: rgb(253, 249, 249);
 }
 
 .searchField{
     margin: 0px 600px;
     padding-top: 12px;
+}
+
+@media  (max-width: 688px){
+    .homeContainer{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+        padding-left: 0px;
+        background-color: rgb(253, 249, 249);
+        width: 320px;
+    }
+    .searchField{
+        margin: 0px 0px;
+        margin-left: 40px;
+        padding-top: 5px;
+    }
 }
