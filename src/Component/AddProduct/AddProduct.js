@@ -47,7 +47,7 @@ const AddProduct = () => {
     }
     return (
         <div className='products'>
-            <h2>Add Product</h2>
+            <h2 style={{paddingLeft:'10px'}}>Add Product</h2>
             <div className='formContainer'>
                 <form  onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-row spaceInput">

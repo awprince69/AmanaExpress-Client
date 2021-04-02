@@ -1,13 +1,13 @@
 .products{
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 10px;
 }
 .spaceInput{
     width: 1000px;
     height: 100px;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .spaceBetween{
     margin-right: 100px;
@@ -16,8 +16,13 @@
     margin-left: 900px;
     margin-bottom: 20px;
 }
+.submitButton:hover{
+    box-shadow: 20px 20px 10px rgb(90, 159, 182);
+}
 
 .formContainer{
     background-color: #ecfdfb;
-    border-radius: 20px;
+    border-radius: 0px;
+    height: 700px;
+    width: 124%;
 }

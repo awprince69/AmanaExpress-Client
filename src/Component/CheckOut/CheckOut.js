@@ -22,7 +22,7 @@ const CheckOut = () => {
 
     const handleCheckOut = () => {
         const addOrder = { ...loggedIn, product: name, price: price, image: ImageURL, orderTime: new Date() }
-        console.log(addOrder);
+        // console.log(addOrder);
         fetch('http://localhost:5055/addOrder', {
             method: 'POST',
             headers: {
@@ -41,7 +41,7 @@ const CheckOut = () => {
             <table className="table table-hover shadow">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col"></th>
                         <th scope="col">Description</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Price</th>
@@ -49,7 +49,7 @@ const CheckOut = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"></th>
                         <td>{name}</td>
                         <td>1</td>
                         <td>${price}</td>
